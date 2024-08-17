@@ -24,9 +24,9 @@ function App() {
   }, [length, numberAllow, chart])
 
   const copypasswordtoclipbord = useCallback(() => {
-    password_ref.current.select();  // Select the input text
+    password_ref.current?.select();  // Select the input text
     document.execCommand("copy");  // Copy the selected text
-    alert("Password copied to clipboard!");
+    alertS("Password copied to clipboard!");
     window.navigator.clipboard.writeText(password)
   }, [password])
 
